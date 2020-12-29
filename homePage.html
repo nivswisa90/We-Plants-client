@@ -1,229 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <title>Home Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/styles.css" type="text/css" />
-  <title>Home Page</title>
-</head>
-
-<body id="backgorund_img">
-  <div class="containter">
-    <div class="row no-gutters">
-      <div class="col-sm-6 col-md-8">
-        <h3 id="welcome_header">Welcome Back,</h3>
-        <h3 id="user_header">Naruto Uzumaki</h3>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-6 col-md-4">
-        <h2 id="recent">Search Plants</h2>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-6 col-md-4">
-        <h2 id="recent">Recent Plants</h2>
-      </div>
-    </div>
-    <section>
-      <!--Carousel Wrapper-->
-      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-          <li data-target="#multi-item-example" data-slide-to="1"></li>
-        </ol>
-        <!--/.Indicators-->
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-          <!--First slide-->
-          <div class="carousel-item active">
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/Alocasia-amazonica-Polly-Elephant-Ear-Ryan-Plant-Pot-Blue-Gold_2000x.jpg?v=1601043248"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">Alocasia amazonica-Polly</h4>
-                  <p class="card-text">Level: Easy , Location: Indoor</p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/Calathea-roseopicta-Dottie-Rose-Painted-Calathea_2000x.jpg?v=1569060916"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">Rose Painted Calathea</h4>
-                  <p class="card-text">Level: Hard , Location: Indoor</p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/Dieffenbachia-Maroba-Dumb-Cane_158bf0fe-2166-4d1f-971a-1da18d7b34de_2000x.jpg?v=1569160734"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">Dieffenbachia Maroba</h4>
-                  <p class="card-text">Level: Mediume , Location: Indoor</p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--/.First slide-->
-
-          <!--Second slide-->
-          <div class="carousel-item">
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/String-Of-Hearts-Ceropegia-Woodii_2000x.jpg?v=1569063374"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">String Of Hearts</h4>
-                  <p class="card-text">Level: Easy , Location: Indoor</p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/Codiaeum-Iceton-Croton-110cm_2000x.jpg?v=1569084400"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">Codiaeum Iceton - Croton</h4>
-                  <p class="card-text">
-                    Level: Easy, Location: Indoor/Outdoor
-                  </p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" style="float: left">
-              <div class="card mb-2">
-                <img class="card-img-top"
-                  src="https://cdn.shopify.com/s/files/1/1706/1307/products/Dracaena-fragrans-Burley_2000x.jpg?v=1568963541"
-                  alt="Card image cap" />
-                <div class="card-body">
-                  <h4 class="card-title">Dracaena fragrans Burley</h4>
-                  <p class="card-text">Level: Easy , Location: Indoor</p>
-                  <div id="btns">
-                    <a class="btn btn-light">View</a>
-                    <a class="btn btn-light">Add</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--/.Second slide-->
-        </div>
-        <!--/.Slides-->
-      </div>
-      <!--/.Carousel Wrapper-->
-    </section>
-    <div class="row no-gutters">
-      <div class="col-6 col-md-6">
-        <h2 id="recent">Upcoming Alerts</h2>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small>3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small>Donec id elit non mi porta.</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
-          </a>
+  <body id="backgorund_img">
+    <div class="containter">
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-md-8">
+          <h3 id="welcome_header">Welcome Back,</h3>
+          <h3 id="user_header">Naruto Uzumaki</h3>
         </div>
       </div>
+      <div class="row no-gutters">
+        <div class="col-6 col-md-4">
+          <h2 id="recent">Search Plants</h2>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-6 col-md-4">
+          <h2 id="recent">Recent Plants</h2>
+        </div>
+      </div>
+      <section>
+        <!--Carousel Wrapper-->
+        <div
+          id="multi-item-example"
+          class="carousel slide carousel-multi-item"
+          data-ride="carousel"
+        >
+          <!--Indicators-->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#multi-item-example"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#multi-item-example" data-slide-to="1"></li>
+          </ol>
+          <!--/.Indicators-->
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+            <!--First slide-->
+            <div class="carousel-item active">
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Alocasia-amazonica-Polly-Elephant-Ear-Ryan-Plant-Pot-Blue-Gold_2000x.jpg?v=1601043248"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Alocasia amazonica-Polly</h4>
+                    <p class="card-text">Level: Easy , Location: Indoor</p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Calathea-roseopicta-Dottie-Rose-Painted-Calathea_2000x.jpg?v=1569060916"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Rose Painted Calathea</h4>
+                    <p class="card-text">Level: Hard , Location: Indoor</p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Dieffenbachia-Maroba-Dumb-Cane_158bf0fe-2166-4d1f-971a-1da18d7b34de_2000x.jpg?v=1569160734"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Dieffenbachia Maroba</h4>
+                    <p class="card-text">Level: Mediume , Location: Indoor</p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.First slide-->
+
+            <!--Second slide-->
+            <div class="carousel-item">
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/String-Of-Hearts-Ceropegia-Woodii_2000x.jpg?v=1569063374"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">String Of Hearts</h4>
+                    <p class="card-text">Level: Easy , Location: Indoor</p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Codiaeum-Iceton-Croton-110cm_2000x.jpg?v=1569084400"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Codiaeum Iceton - Croton</h4>
+                    <p class="card-text">
+                      Level: Easy, Location: Indoor/Outdoor
+                    </p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Dracaena-fragrans-Burley_2000x.jpg?v=1568963541"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Dracaena fragrans Burley</h4>
+                    <p class="card-text">Level: Easy , Location: Indoor</p>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Add</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.Second slide-->
+          </div>
+          <!--/.Slides-->
+        </div>
+        <!--/.Carousel Wrapper-->
+      </section>
+      <div class="row no-gutters">
+        <div class="col-6 col-md-4">
+          <h2 id="recent">My Plants</h2>
+        </div>
+      </div>
+      <section>
+        <!--Carousel Wrapper-->
+        <div
+          id="multi-item-example"
+          class="carousel slide carousel-multi-item"
+          data-ride="carousel"
+        >
+          <!--Indicators-->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#multi-item-example"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#multi-item-example" data-slide-to="1"></li>
+          </ol>
+          <!--/.Indicators-->
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+            <!--First slide-->
+            <div class="carousel-item active">
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Ficus-benghalensis-Audrey-Bengal-Fig-Large_2000x.jpg?v=1569093503"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Ficus benghalensis Audrey - Bengal Fig</h4>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Monstera-adansonii-Philodendron-Monkey-Mask-Large_2000x.jpg?v=1569156354"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Monstera adansonii - Philodendron Monkey Mask</h4>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3" style="float: left">
+                <div class="card mb-2">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.shopify.com/s/files/1/1706/1307/products/Peperomia-argyreia-Watermelon-Peperomia_2000x.jpg?v=1602958256"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">Peperomia argyreia - Watermelon Peperomia</h4>
+                    <div id="btns">
+                      <a class="btn btn-light">View</a>
+                      <a class="btn btn-light">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.First slide-->
+          <!--Carousel Wrapper-->
+    <!-- <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel"> -->
+      <!--Indicators-->
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+      </ol> -->
+      <!--/.Indicators-->
+      <!--Slides-->
+      <!-- <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="view">
+            <img class="d-block w-25" src="https://cdn.shopify.com/s/files/1/1706/1307/products/Ficus-benghalensis-Audrey-Bengal-Fig-Large_2000x.jpg?v=1569093503" alt="First slide">
+            <div class="mask rgba-black-light"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Ficus benghalensis Audrey - Bengal Fig</h3>
+          </div>
+        </div>
+        <div class="carousel-item"> -->
+          <!--Mask color-->
+          <!-- <div class="view">
+            <img class="d-block w-25" src="https://cdn.shopify.com/s/files/1/1706/1307/products/Monstera-adansonii-Philodendron-Monkey-Mask-Large_2000x.jpg?v=1569156354" alt="Second slide">
+            <div class="mask rgba-black-strong"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Monstera adansonii - Philodendron Monkey Mask</h3>
+          </div>
+        </div>
+        <div class="carousel-item"> -->
+          <!--Mask color-->
+          <!-- <div class="view">
+            <img class="d-block w-25" src="https://cdn.shopify.com/s/files/1/1706/1307/products/Peperomia-argyreia-Watermelon-Peperomia_2000x.jpg?v=1602958256" alt="Third slide">
+            <div class="mask rgba-black-slight"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Peperomia argyreia - Watermelon Peperomia</h3>
+          </div>
+        </div> -->
+      <!-- </div> -->
+      <!--/.Slides-->
+      </section>
+      <div class="row no-gutters">
+        <div class="col-6 col-md-6">
+          <h2 id="recent">Upcoming Alerts</h2>
+          <div class="list-group">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action flex-column align-items-start active"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                diam eget risus varius blandit.
+              </p>
+              <small>Donec id elit non mi porta.</small>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action flex-column align-items-start"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                diam eget risus varius blandit.
+              </p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action flex-column align-items-start"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                diam eget risus varius blandit.
+              </p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
- 
 
-  <footer class="site-footer">
-    <div class="footer_about">
-      <a href="#" class="title">We Plants</a>
-      <a href="#" class="aboutUs">About Us</a>
-    </div>
-    <div class="footer_icons">
-      <p class="copyright-text">
-        Copyright &copy; 2020 All Rights Reserved by Martin & Niv
-      </p>
-      <ul class="social-icons">
-        <li>
-          <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-        </li>
-        <li>
-          <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+    <footer class="site-footer">
+      <div class="footer_about">
+        <a href="#" class="title">We Plants</a>
+        <a href="#" class="aboutUs">About Us</a>
+      </div>
+      <div class="footer_icons">
+        <p class="copyright-text">
+          Copyright &copy; 2020 All Rights Reserved by Martin & Niv
+        </p>
+        <ul class="social-icons">
+          <li>
+            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+          </li>
+          <li>
+            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/f074fb489b.js" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-  <script src="./js/handler.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f074fb489b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/handler.js"></script>
+  </body>
 </html>

@@ -38,6 +38,9 @@ div {
   font-size: 30px;
   line-height: 20px;
 }
+.carousel-caption{
+  color: black;
+}
 .carousel-item {
   margin-left: 9%;
   margin-bottom: 0%;
