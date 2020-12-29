@@ -38,6 +38,9 @@ div {
   font-size: 30px;
   line-height: 20px;
 }
+#card-location {
+  margin-left: 9%;
+}
 .carousel-caption{
   color: black;
 }
