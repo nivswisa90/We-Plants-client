@@ -30,15 +30,19 @@
           <h2 id="recent">Search Plants</h2>
           <form class="form-inline my-2 my-lg-0">
             <input
+              id="query-value"
               class="form-control mr-sm-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+            <button id="get-query-search" class="btn btn-outline-dark my-2 my-sm-0" type="submit">
               Search
             </button>
           </form>
+          <div id = "table-data" class="d-flex flex-row justify-content-center">
+            <p id="showData" class="d-flex flex-row justify-content-center"></p>
+          </div>
         </div>
       </div>
       <div class="row no-gutters">
