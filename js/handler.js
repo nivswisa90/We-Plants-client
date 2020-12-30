@@ -28,13 +28,14 @@ function getAllPlantsBySearch(query) {
 //Need to allocate the cards
 function recreatePlantsTable(plants) {
     const plantLen = plants.length;
+    $("#multi-item-example-search").empty().remove();
     if (plantLen) {
-        $("#table-data").append("<div id='multi-item-example' class='carousel slide carousel-multi-item' data-ride='carousel'>" +
+        $("#table-data").append("<div id='multi-item-example-search' class='carousel slide carousel-multi-item' data-ride='carousel'>" +
             "<ol class='carousel-indicators'><li data-target='#multi-item-example' data-slide-to='0' class='active'></li>" +
-            "<li data-target='#multi-item-example' data-slide-to='1'></li></ol><div class='carousel-inner-search' role='listbox'></div></div>");
+            "<li data-target='#multi-item-example' data-slide-to='1'></li></ol><div class='carousel-inner-search' role='listbox'><div id='search-carousel-item-active' class='carousel-item active'></div><div id='search-carousel-item' class='carousel-item active'></div></div></div>");
 
         for (let i = 0; i < plantLen; i++) {
-            let row = "<div class='carousel-item active'><div id='card-location' class='col-md-3' style='float: left'>" +
+            let row = "<div id='card-location' class='col-md-3' style='float: left'>" +
                 "<div class='card mb-2'>" +
                 "<img class='card-img-top' src='$imgDb' alt='Card image cap'/>" +
                 "<div class='card-body'> <h4 class='card-title'>$nameDb</h4>" +
@@ -43,7 +44,12 @@ function recreatePlantsTable(plants) {
                 "<a class='btn btn-light'>Add</a></div></div></div></div></div>"
             row = row.replace("$imgDb", plants[i].image_url);
             row = row.replace("$nameDb", plants[i].name);
-            $(".carousel-inner-search").append(row);
+            if(i < 3){
+                $("#search-carousel-item-active").append(row);
+            }else{
+                $("#search-carousel-item").append(row);
+            }
+            
         }
     }
 
