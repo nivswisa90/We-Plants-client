@@ -10,14 +10,12 @@ const user_service_url = "http://localhost:3000/api/users/2";
         const query = `?name=${queryValue}`;
         getPlantsBySearch(query);
     });
-    // $(".btn-light").click(() => {
-    //     const queryValue = $(".card-title").val();
-    //     console.log(queryValue);
-    //     // const query = `name=${queryValue}`;
-    //     // console.log(query);
-    //     // getMyFavoritesPlants(query);
-    // });
-
+    $(document.body).on('click', '.btn-light', function(){
+        const queryValue = $(this).val();
+        console.log(queryValue);
+        const query = `?name=${queryValue}`;
+        addToMyFavorites(query, queryValue);
+    });
 })();
 
 function getPlantsBySearch(query) {
@@ -40,11 +38,22 @@ function getMyFavoritesPlants() {
     });
 }
 
+function addToMyFavorites(query, name) {
+    console.log(query, name);
+    $.ajax({
+        url: user_service_url + query,
+        type: "POST",
+        data: name,
+        success: function(user){
+            favoritesTable(user);
+        }
+    })
+}
+
 
 
 function favoritesTable(users) {
     const userLen = users.myFavorites.length;
-    console.log(userLen);
     $("#multi-item-example-favorites").empty().remove();
     if (userLen) {
         $("#showFavorites").append(
@@ -53,16 +62,15 @@ function favoritesTable(users) {
             "<li data-target='#multi-item-example-favorites' data-slide-to='1'></li></ol><div class='carousel-inner' role='listbox'><div id='favorites-carousel-item-active' class='carousel-item active'></div><div id='favorites-carousel-item' class='carousel-item'></div></div></div>"
         );
         for (let i = 0; i < userLen; i++) {
+            console.log(users.myFavorites[i].image_url);
             let row =
                 "<div class='col-md-3' style='float: left'>" +
                 "<div class='card mb-2'>" +
-                "<img class='card-img-top' src='$imgDb' alt='Card image cap'/>" +
-                "<div class='card-body'> <h4 class='card-title'>$nameDb</h4>" +
+                `<img class='card-img-top' src='${users.myFavorites[i].image_url}' alt='Card image cap'/>` +
+                `<div class='card-body'> <h4 class='card-title'>${users.myFavorites[i].plant_name}</h4>` +
                 "<p class='card-text'>Level: Hard , Location: Indoor</p>" +
-                "<div id='btns'><a class='btn btn-info'>View</a> " +
-                "<a class='btn btn-light'>Add</a></div></div></div></div>";
-            row = row.replace("$imgDb", users.myFavorites[i].image_url);
-            row = row.replace("$nameDb", users.myFavorites[i].plant_name);
+                "<div id='btns'><button class='btn btn-info'>View</button> " +
+                `<button class='btn btn-light' value='${users.myFavorites[i].plant_name}'>Add</button></div></div></div></div>`;
             if (i < 3) {
                 $("#favorites-carousel-item-active").append(row);
             } else {
@@ -91,13 +99,11 @@ function recreatePlantsTable(plants) {
             let row =
                 "<div class='col-md-3' style='float: left'>" +
                 "<div class='card mb-2'>" +
-                "<img class='card-img-top' src='$imgDb' alt='Card image cap'/>" +
-                "<div class='card-body'> <h4 class='card-title'>$nameDb</h4>" +
+                `<img class='card-img-top' src='${plants[i].image_url}' alt='Card image cap'/>` +
+                `<div class='card-body'> <h4 class='card-title'>${plants[i].name}</h4>` +
                 "<p class='card-text'>Level: Hard , Location: Indoor</p>" +
-                "<div id='btns'><a class='btn btn-info'>View</a> " +
-                "<a class='btn btn-light'>Add</a></div></div></div></div>";
-            row = row.replace("$imgDb", plants[i].image_url);
-            row = row.replace("$nameDb", plants[i].name);
+                "<div id='btns'><button class='btn btn-info'>View</button> " +
+                `<button class='btn btn-light' value= '${plants[i].name}'>Add</button></div></div></div></div>`;
             if (i < 3) {
                 $("#search-carousel-item-active").append(row);
             } else {
