@@ -1,5 +1,5 @@
 const plants_service_url = "http://localhost:3000/api/plants";
-const user_service_url = "http://localhost:3000/api/users/2";
+const user_service_url = "http://localhost:3000/api/users/2?";
 //Self invoke  for the button listeners
 
 // logics of the buttons.
@@ -7,36 +7,56 @@ const user_service_url = "http://localhost:3000/api/users/2";
   $("#get-query-search").click(() => {
     const queryValue = $("#query-value").val();
     const query = `?name=${queryValue}`;
-    getAllPlantsBySearch(query);
+    getPlantsBySearch(query);
   });
-  $(".btn-light").click(() => {
-    const queryValue = $(".card-title").val();
-    console.log("HOI");
-  });
+//   $(".btn-light").click(() => {
+//     const queryValue = $(".card-title").val();
+//     console.log(queryValue);
+//     const query = `name=${queryValue}`;
+//     console.log(query);
+//     getMyFavoritesPlants(query);
+//   });
+  
 })();
 
-function getAllPlantsBySearch(query) {
-  $.ajax({
-    url: plants_service_url + query,
-    type: "GET",
-    success: function (plants) {
-      recreatePlantsTable(plants);
-    },
-  });
-}
-
+function getPlantsBySearch(query) {
+    $.ajax({
+      url: plants_service_url + query,
+      type: "GET",
+      success: function (plants) {
+        recreatePlantsTable(plants);
+      },
+    });
+  }
+// function getMyFavoritesPlants(query) {
+//   $.ajax({
+//     url: user_service_url + query,
+//     type: "GET",
+//     success: function (plants) {
+//       console.log(plants);
+//       recreatePlantsTable(plants);
+//     },
+//   });
+// }
 //Need to allocate the cards
 function recreatePlantsTable(plants) {
+//   console.log("HHH");
   const plantLen = plants.length;
   $("#multi-item-example-search").empty().remove();
   if (plantLen) {
     $("#possible-error").hide();
     // id='carousel-inner-search'
+
     $("#table-data").append(
       "<div id='multi-item-example-search' class='carousel slide carousel-multi-item' data-ride='carousel'>" +
         "<ol class='carousel-indicators'><li data-target='#multi-item-example-search' data-slide-to='0' class='active'></li>" +
         "<li data-target='#multi-item-example-search' data-slide-to='1'></li></ol><div class='carousel-inner' role='listbox'><div id='search-carousel-item-active' class='carousel-item active'></div><div id='search-carousel-item' class='carousel-item'></div></div></div>"
     );
+    // $("#showFavorites").append(
+    //   "<div id='multi-item-example-search' class='carousel slide carousel-multi-item' data-ride='carousel'>" +
+    //     "<ol class='carousel-indicators'><li data-target='#multi-item-example-search' data-slide-to='0' class='active'></li>" +
+    //     "<li data-target='#multi-item-example-search' data-slide-to='1'></li></ol><div class='carousel-inner' role='listbox'><div id='search-carousel-item-active' class='carousel-item active'></div><div id='search-carousel-item' class='carousel-item'></div></div></div>"
+    // );
 
     for (let i = 0; i < plantLen; i++) {
       let row =
