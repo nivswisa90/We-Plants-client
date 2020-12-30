@@ -30,6 +30,7 @@ function recreatePlantsTable(plants) {
     const plantLen = plants.length;
     $("#multi-item-example-search").empty().remove();
     if (plantLen) {
+        $("#possible-error").hide();
         // id='carousel-inner-search'
         $("#table-data").append("<div id='multi-item-example-search' class='carousel slide carousel-multi-item' data-ride='carousel'>" +
             "<ol class='carousel-indicators'><li data-target='#multi-item-example-search' data-slide-to='0' class='active'></li>" +
@@ -52,6 +53,9 @@ function recreatePlantsTable(plants) {
             }
             
         }
+    }
+    else {
+        $("#possible-error").show();
     }
 
 }

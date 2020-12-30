@@ -38,6 +38,10 @@ div {
   font-size: 30px;
   line-height: 20px;
 }
+#possible-error {
+  display: none;
+  color: red;
+}
 /* #card-location {
   margin-left: 9%;
 } */
