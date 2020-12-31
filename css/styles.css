@@ -34,7 +34,14 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+  background-image: linear-gradient(
+    to right top,
+    #99bbcb,
+    #a5c7d7,
+    #b1d4e2,
+    #bde0ee,
+    #c9edfa
+  );
 }
 
 #temp {
@@ -122,18 +129,6 @@ body {
   margin-bottom: 0%;
 }
 
-/*
-#img_size {
-  margin-left: 9%;
-  width: 35%;
-  margin-top: 4%;
-}
-.carousel-caption {
-  color: #626262;
-  right: 60%;
-  top: 60%;
-  display: block;
-} */
 /*slides card*/
 .carousel-indicators {
   position: relative;

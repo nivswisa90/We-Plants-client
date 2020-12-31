@@ -59,11 +59,11 @@ function addToMyFavorites(query, name) {
     type: "PUT",
     data: name,
     success: function (test) {
-        getMyFavoritesPlants();
+      getMyFavoritesPlants();
     },
-    error: function(err) {
-        alert(`The plant ${name} is already exist in your favorites`);
-    }
+    error: function (err) {
+      alert(`The plant ${name} is already exist in your favorites`);
+    },
   });
 }
 
