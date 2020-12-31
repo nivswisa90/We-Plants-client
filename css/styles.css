@@ -16,7 +16,12 @@ body {
   background-color: #a64253;
   font-family: "Montserrat", sans-serif;
 }
-
+#description{
+  margin-left:5%;
+}
+#location{
+  margin-right:5%;
+}
 #weather {
   flex: 0 0 70%;
   height: 40%;
