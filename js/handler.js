@@ -42,7 +42,7 @@ function getMyFavoritesPlants() {
 function addToMyFavorites(query, name) {
     $.ajax({
         url: user_service_url + query,
-        type: "POST",
+        type: "PUT",
         data: name,
         success: function(user){
             favoritesTable(user);
@@ -63,7 +63,6 @@ function getWeather() {
 function showWeather(weather){
     const celcius = Math.round(parseFloat(weather.main.temp)-273.15);
     const fahrenheit = Math.round(((parseFloat(weather.main.temp)-273.15)*1.8)+32); 
-    
     $('#description').html(weather.weather[0].description); 
     $('#temp').html(celcius +  '&deg;');
     $('#location').html(weather.name); 
