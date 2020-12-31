@@ -17,6 +17,11 @@ const weather_url = "http://localhost:3000/api/weather";
     const query = `?name=${queryValue}`;
     addToMyFavorites(query, queryValue);
   });
+  $(document.body).on("click", ".btn-warning", function () {
+    const queryValue = $(this).val();
+    const query = `?name=${queryValue}`;
+    deleteFromMyFavorites(query);
+  });
 })();
 
 function getPlantsBySearch(query) {
@@ -38,14 +43,23 @@ function getMyFavoritesPlants() {
     },
   });
 }
+function deleteFromMyFavorites(query) {
+  $.ajax({
+    url: user_service_url + query,
+    type: "DELETE",
+    success: function () {
+      getMyFavoritesPlants();
+    },
+  });
+}
 
 function addToMyFavorites(query, name) {
   $.ajax({
     url: user_service_url + query,
     type: "PUT",
     data: name,
-    success: function (user) {
-      favoritesTable(user);
+    success: function () {
+      getMyFavoritesPlants();
     },
   });
 }
@@ -99,8 +113,8 @@ function favoritesTable(users) {
         `<img class='card-img-top' src='${users.myFavorites[i].image_url}' alt='Card image cap'/>` +
         `<div class='card-body'> <h4 class='card-title'>${users.myFavorites[i].plant_name}</h4>` +
         "<p class='card-text'>Level: Hard , Location: Indoor</p>" +
-        "<div id='btns'><button class='btn btn-info'>Delete</button> " +
-        `<button class='btn btn-light' value='${users.myFavorites[i].plant_name}'>Add</button></div></div></div></div>`;
+        "<div id='btns'><button class='btn btn-info'>View</button> " +
+        `<button class='btn btn-warning' value='${users.myFavorites[i].plant_name}'>Delete</button> `;
       if (i < 3) {
         $("#favorites-carousel-item-active").append(row);
       } else {
