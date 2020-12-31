@@ -92,13 +92,6 @@ function showWeather(weather) {
   }
 }
 
-function prepareDivOfCards(section) {
-  $(`#show${section}`).append(
-    `<div id='multi-item-example-${section}' class='carousel slide carousel-multi-item' data-ride='carousel'>` +
-      `<ol class='carousel-indicators'><li data-target='#multi-item-example-${section}' data-slide-to='0' class='active'></li>` +
-      `<li data-target='#multi-item-example-${section}' data-slide-to='1'></li></ol><div class='carousel-inner' role='listbox'><div id='${section}-carousel-item-active' class='carousel-item active'></div><div id='${section}-carousel-item' class='carousel-item'></div></div></div>`
-  );
-}
 
 function favoritesTable(users) {
   const userLen = users.myFavorites.length;
