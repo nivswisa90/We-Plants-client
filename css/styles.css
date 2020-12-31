@@ -13,10 +13,9 @@ div {
 }
 /* Weather widget */
 body {
-  background-color: #A64253;
+  background-color: #a64253;
   font-family: "Montserrat", sans-serif;
 }
-
 
 #weather {
   flex: 0 0 70%;
@@ -30,13 +29,13 @@ body {
   font-weight: 300;
   font-size: 1.3em;
   color: #626262;
-  /* text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); */
   height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(212, 233, 235);
-} 
+
+  background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+}
 
 #temp {
   font-size: 81px;
