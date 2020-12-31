@@ -58,9 +58,12 @@ function addToMyFavorites(query, name) {
     url: user_service_url + query,
     type: "PUT",
     data: name,
-    success: function () {
-      getMyFavoritesPlants();
+    success: function (test) {
+        getMyFavoritesPlants();
     },
+    error: function(err) {
+        alert(`The plant ${name} is already exist in your favorites`);
+    }
   });
 }
 
